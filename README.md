@@ -10,10 +10,15 @@ Video Streaming using Kinesis and facial recognition using AWS Rekognition
 Sanjay Garje https://www.linkedin.com/in/sanjaygarje/
 # Student: 
   Aastha Kumar (https://www.linkedin.com/in/aastha-kumar-57417a9b/), 
-  Ritika Chadha, https://www.linkedin.com/in/anjana-p/
-  Anjana Pradeep, 
+  
+  Ritika Chadha,
+  
+  Anjana Pradeep https://www.linkedin.com/in/anjana-p/, 
+  
   Spandana Pandala, 
+  
   Prasanna Kona
+  
 # Project Introduction 
   Sample Demo Screenshots
 # Pre-requisites Set Up
