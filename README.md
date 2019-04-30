@@ -32,8 +32,10 @@ We plan to use AWS Recognition and Amazon Kinesis Streams to perform the facial 
   4. Analyze the video to detect known faces.
   5. Send notifications whenever the known faces appear in video.
 
-# Demo Screenshots
+# Demo Screenshots 
+Whenever it finds a known face in video, it sends the notification with the Name of the person recognized and the link to S3 bucket containing the image of the person. Clicking on that s3 link, one can see the image of the person matched in the video.
 
+![Alt text](/Notification.png?raw=true "Notification Email")
 
 # Pre-requisites Set Up
   Here includes bullet point list of resources one need to configure in their cloud account. (E.g. For AWS: S3 buckets, EMR   etc.)
