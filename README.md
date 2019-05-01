@@ -77,7 +77,8 @@
     
     9. Create Kinesis stream - search for Kinesis stream in aws, click on create 'Create Kinesis stream', specify the name, select 1 in shards and click on create button.
     10. Create 2 roles - SNSPublishRole and RekognitionIAM Role using AWS IAM service
-    Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn created in step 8.
+    Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn and kinesis stream arn created in step 8 and 9.
+    Specify the following policy for RekognitionIAM role using the attached file(RekognitionIAM). Replace the arn with kinesis stream arn created in step 9.
     
     
     
