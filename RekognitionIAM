@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "kinesis:*"
+            ],
+            "Resource": "<<kinesis stream arn>>",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "kinesisvideo:*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "rekognition:*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
