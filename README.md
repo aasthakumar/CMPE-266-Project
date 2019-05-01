@@ -67,6 +67,10 @@
     aws rekognition create-collection --collection-id cmpe266VideoRek --region us-west-2
     7. Use AWS rekognition to create face bounds for the images uploaded to S3. You need to run the following command for each of the image uploaded to S3 bucket (Replace "cmpe-266-project" with your S3 bucket name, "Aastha.jpeg" - with the image name, "cmpe266VideoRek" - collection name created in step 6, and "Aastha" with the name of person in image.
     aws rekognition index-faces --image '{"S3Object":{"Bucket":"cmpe-266-project","Name":"Aastha.jpeg"}}' --collection-id "cmpe266VideoRek" --detection-attributes "ALL" --external-image-id "Aastha" --region us-west-2
+    8. Create a simple notification service using aws sns service - Follow the steps on the following link to create a topic 
+    https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html
+    After you subscribe to this service, you will receive an email to confirm subscription
+    
     
 
 
