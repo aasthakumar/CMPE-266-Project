@@ -27,7 +27,7 @@
     appears in the video. This application can be easily extended to build an auto unlock door service at home. 
     The door is unlocked only when the known face appears in front of the front-door camera. 
 
-# Features List
+# Features List:
     1. Capture the live video stream from the webcam.
     2. Process the captured video stream using AWS Kinesis.
     3. Train AWS Recognition algorithm with known faces. 
@@ -88,9 +88,17 @@
     Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn and kinesis stream arn created in step 9 and 10.
     Specify the following policy for RekognitionIAM role using the attached file(RekognitionIAM). Replace the arn with kinesis stream arn created in step 10.
     
-    11. Finally create a lambda function - Use the attached file for code (Lambda)
+    12. Finally create a lambda function - Use the attached file for code (Lambda)
     
     
+# Start Application:
+
+    1. Create the kinesis video stream for webcam to connect to. Use the default settings to create one.
+    
+    2. Create the video processor using the attached json file (stream.json). Add Kinesis video stream arn created in step 1, 
+    RekognitionVideoIAM created in step 11 of pre-req, and KinesisDataStreamArn created in step 10 of pre-req.
+    
+    3. 
     
 
 
