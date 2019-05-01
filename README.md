@@ -42,6 +42,7 @@
 # Pre-requisites Set Up 
     MAC OS steps 
     1. AWS account - You need to have an aws account to try out this project.
+    
     2. Create a user using AWS IAM service and assign following permissions to the user
        a) AmazonKinesisFullAccess
        b) AmazonKinesisVideoStreamsFullAccess
@@ -50,24 +51,30 @@
        e) AmazonKinesisAnalyticsFullAccess
        f) CloudWatchFullAccess
      Then navigate to the security credentials tab and generate the access and secret key for future use.
+     
     3. Install aws cli - Follow instructions given on https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
        Sometimes when starting the aws cli, it complains that groff is missing. Install groff using following command - 
        brew install groff gs
+       
     4. Install following tools (Pre-requisites for step 5)
        cmake - brew install cmake
        autoconf - brew install autoconf
        bison - brew install bison
        pkg-config - brew install pkg-config
        install java jdk - https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-macos.htm#JSJIG-GUID-F575EB4A-70D3-4AB4-A20E-DBE95171AB5F
+       
     5. Clone AWS SDK for connecting your laptops webcam to AWS Kinesis from following link
     https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-cpp#building-from-source
     From terminal - Navigate to the folder, then go to kinesis-video-native-build folder and then run ./install-script
-    5. Create a bucket in amazon s3 (name - cmpe-266-project) and upload the images of people you want to give the access.
-    6. Open aws cli and create a face collection that will be used by AWS Rekognition (We named it cmpe266VideoRek) 
+    6. Create a bucket in amazon s3 (name - cmpe-266-project) and upload the images of people you want to give the access.
+    
+    7. Open aws cli and create a face collection that will be used by AWS Rekognition (We named it cmpe266VideoRek) 
     aws rekognition create-collection --collection-id cmpe266VideoRek --region us-west-2
-    7. Use AWS rekognition to create face bounds for the images uploaded to S3. You need to run the following command for each of the image uploaded to S3 bucket (Replace "cmpe-266-project" with your S3 bucket name, "Aastha.jpeg" - with the image name, "cmpe266VideoRek" - collection name created in step 6, and "Aastha" with the name of person in image.
+    
+    8. Use AWS rekognition to create face bounds for the images uploaded to S3. You need to run the following command for each of the image uploaded to S3 bucket (Replace "cmpe-266-project" with your S3 bucket name, "Aastha.jpeg" - with the image name, "cmpe266VideoRek" - collection name created in step 6, and "Aastha" with the name of person in image.
     aws rekognition index-faces --image '{"S3Object":{"Bucket":"cmpe-266-project","Name":"Aastha.jpeg"}}' --collection-id "cmpe266VideoRek" --detection-attributes "ALL" --external-image-id "Aastha" --region us-west-2
-    8. Create a simple notification service using aws sns service - Follow the steps on the following link to create a topic 
+    
+    9. Create a simple notification service using aws sns service - Follow the steps on the following link to create a topic 
     https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html
     After you subscribe to this service, you will receive an email to confirm subscription
    ![Alt text](/SubscriptionConfirmation.png?raw=true "Subscription Email")
@@ -75,10 +82,12 @@
     After you confirm subscription, you will see the following confirmation
    ![Alt text](/SubscriptionEmail.png?raw=true "Subscription Confirmation")
     
-    9. Create Kinesis stream - search for Kinesis stream in aws, click on create 'Create Kinesis stream', specify the name, select 1 in shards and click on create button.
-    10. Create 2 roles - SNSPublishRole and RekognitionIAM Role using AWS IAM service
-    Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn and kinesis stream arn created in step 8 and 9.
-    Specify the following policy for RekognitionIAM role using the attached file(RekognitionIAM). Replace the arn with kinesis stream arn created in step 9.
+    10. Create Kinesis stream - search for Kinesis stream in aws, click on create 'Create Kinesis stream', specify the name, select 1 in shards and click on create button.
+    
+    11. Create 2 roles - SNSPublishRole and RekognitionIAM Role using AWS IAM service
+    Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn and kinesis stream arn created in step 9 and 10.
+    Specify the following policy for RekognitionIAM role using the attached file(RekognitionIAM). Replace the arn with kinesis stream arn created in step 10.
+    
     11. Finally create a lambda function - Use the attached file for code (Lambda)
     
     
