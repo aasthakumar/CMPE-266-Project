@@ -75,6 +75,11 @@
     After you confirm subscription, you will see the following confirmation
    ![Alt text](/SubscriptionEmail.png?raw=true "Subscription Confirmation")
     
+    9. Create Kinesis stream - search for Kinesis stream in aws, click on create 'Create Kinesis stream', specify the name, select 1 in shards and click on create button.
+    10. Create 2 roles - SNSPublishRole and RekognitionIAM Role using AWS IAM service
+    Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn created in step 8.
+    
+    
     
 
 
