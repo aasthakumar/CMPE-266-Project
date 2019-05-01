@@ -70,6 +70,10 @@
     8. Create a simple notification service using aws sns service - Follow the steps on the following link to create a topic 
     https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html
     After you subscribe to this service, you will receive an email to confirm subscription
+   ![Alt text](/SubscriptionConfirmation.png?raw=true "Subscription Email")
+    
+    After you confirm subscription, you will see the following confirmation
+   ![Alt text](/SubscriptionEmail.png?raw=true "Subscription Confirmation")
     
     
 
