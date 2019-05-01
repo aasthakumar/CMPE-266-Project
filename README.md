@@ -79,6 +79,7 @@
     10. Create 2 roles - SNSPublishRole and RekognitionIAM Role using AWS IAM service
     Specify the following policy for SNSPublishRole -- see the attached file (SNSPolicy). Replace the arn with sns topic arn and kinesis stream arn created in step 8 and 9.
     Specify the following policy for RekognitionIAM role using the attached file(RekognitionIAM). Replace the arn with kinesis stream arn created in step 9.
+    11. Finally create a lambda function - Use the attached file for code (Lambda)
     
     
     
