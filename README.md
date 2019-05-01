@@ -121,5 +121,29 @@
     You will see your webcam running and you will start receiving notifications once the matching face appears in the video.
     
 
+# Stop Application and Clean-up:
 
+    1. Stop the video processor -
+    aws rekognition stop-stream-processor --name streamProcessorForBlog --region us-west-2
+    
+    2. delete the video processor - 
+    aws rekognition delete-stream-processor --name streamProcessorForBlog --region us-west-2
+    
+    3. Delete Kinesis video stream by going to console and deleting that.
+    
+    4. Delete the lambda function created in pre-req steps.
+    
+    5. Delete the sns topic created above.
+    
+    6. Delete the kinesis stream and two roles created above - SNSPublishRole, RekognitionIAM.
+    
+    7. Delete the S3 bucket.
+    
+    
+# References
+    https://aws.amazon.com/blogs/machine-learning/easily-perform-facial-analysis-on-live-feeds-by-creating-a-serverless-video-analytics-environment-with-amazon-rekognition-video-and-amazon-kinesis-video-streams/
+    
+    https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+    
+    https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-cpp#building-from-source
     
