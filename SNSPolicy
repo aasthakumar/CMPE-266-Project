@@ -15,7 +15,7 @@
                 "kinesis:DescribeStream",
                 "kinesis:ListStreams"
             ],
-            "Resource": "arn:aws:kinesis:us-west-2:793506462333:stream/RekognitionVideoBlog-Stream",
+            "Resource": "<<kinesis stream arn>>",
             "Effect": "Allow"
         },
         {
