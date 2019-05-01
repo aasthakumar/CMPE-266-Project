@@ -11,18 +11,21 @@
     Sanjay Garje https://www.linkedin.com/in/sanjaygarje/
 
 # Student: 
-    Aastha Kumar (https://www.linkedin.com/in/aastha-kumar-57417a9b/), 
+    Aastha Kumar (https://www.linkedin.com/in/aastha-kumar-57417a9b/)
 
-    Ritika Chadha,
+    Ritika Chadha
 
-    Anjana Pradeep https://www.linkedin.com/in/anjana-p/, 
+    Anjana Pradeep https://www.linkedin.com/in/anjana-p/
 
-    Spandana Pandala, 
+    Spandana Pandala
 
     Prasanna Kona
   
 # Project Introduction: 
-    We plan to use AWS Recognition and Amazon Kinesis Streams to perform the facial analysis on a live video stream. The idea is to define a few faces as known faces and use AWS SNS service to send an alert whenever any known face appears in the video. This application can be easily extended to build an auto unlock door service at home. The door is unlocked only when the known face appears in front of the front-door camera. 
+    We plan to use AWS Recognition and Amazon Kinesis Streams to perform the facial analysis on a live video stream. 
+    The idea is to define a few faces as known faces and use AWS SNS service to send an alert whenever any known face
+    appears in the video. This application can be easily extended to build an auto unlock door service at home. 
+    The door is unlocked only when the known face appears in front of the front-door camera. 
 
 # Features List
     1. Capture the live video stream from the webcam.
