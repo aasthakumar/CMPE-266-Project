@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "sns:Publish"
+            ],
+            "Resource": "<<add sns topic arn>>",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "kinesis:GetRecords",
+                "kinesis:GetShardIterator",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams"
+            ],
+            "Resource": "arn:aws:kinesis:us-west-2:793506462333:stream/RekognitionVideoBlog-Stream",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "kinesis:ListStreams"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
