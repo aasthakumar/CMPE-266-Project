@@ -66,6 +66,7 @@
     5. Clone AWS SDK for connecting your laptops webcam to AWS Kinesis from following link
     https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-cpp#building-from-source
     From terminal - Navigate to the folder, then go to kinesis-video-native-build folder and then run ./install-script
+    
     6. Create a bucket in amazon s3 (name - cmpe-266-project) and upload the images of people you want to give the access.
     
     7. Open aws cli and create a face collection that will be used by AWS Rekognition (We named it cmpe266VideoRek) 
@@ -98,7 +99,26 @@
     2. Create the video processor using the attached json file (stream.json). Add Kinesis video stream arn created in step 1, 
     RekognitionVideoIAM created in step 11 of pre-req, and KinesisDataStreamArn created in step 10 of pre-req.
     
-    3. 
+    use the aws cli to create the processor
+    aws rekognition create-stream-processor --region us-west-2 --cli-input-json file://<PATH_TO_Stream_JSON_FILE_ABOVE>
+    
+    Start the processor using following command
+    aws rekognition start-stream-processor --name streamProcessorForBlog --region us-west-2
+    
+    check the status using following command
+    aws rekognition list-stream-processors --region us-west-2
+    
+    3. Once the processor is running, run the sdk cloned and set-up in step 5 of pre-req. Use the same terminal to run the following command.
+    
+    export AWS_ACCESS_KEY_ID=<FILL_IN>
+
+    export AWS_SECRET_ACCESS_KEY=<FILL_IN>
+
+    And run this command:
+
+    ./kinesis_video_gstreamer_sample_app LiveRekognitionVideoAnalysisBlog
+    
+    You will see your webcam running and you will start receiving notifications once the matching face appears in the video.
     
 
 
