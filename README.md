@@ -17,7 +17,7 @@
 
     Anjana Pradeep https://www.linkedin.com/in/anjana-p/
 
-    Spandana Padala
+    Spandana Padala https://www.linkedin.com/in/spandanapadala/
 
     Prasanna Kona
   
